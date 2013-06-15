@@ -64,10 +64,48 @@ Zachary S. Bischof\\
 %******************************************************************************
 \begin{abstract}
 
+PlanetLab has become a popular testbed for gathering Internet measurements. To
+provide a more accurate platform for this purpose, researchers have attempted
+to improve PlanetLab's representativeness of the Internet. While we don't know
+what to model PlanetLab after, prior works have shown characteristics of these
+nodes to be generally homogenous. We therefore focus on adding heterogeneity to
+PlanetLab to increase its likeness to the Internet. We do this by exploiting
+the existing heterogeneity of university networks in the world. Our work
+attempts to discover how PlanetLab nodes are similar and university nodes with
+the most potential to provide diversity.
+
 \end{abstract}
 
 %******************************************************************************
 \section{Introduction}
+
+PlanetLab is a network designed to connect large networks in academia. In this
+way, a testbed is formed that is geographically distributed and collectively
+managed. Although not it's original intention, many researchers take advantage
+of this resource to conduct measures of the Internet.
+
+However, due to the nature of it's design, qualities of PlanetLab sites are
+found to be generally homogeneous. Sites are mostly connected to high speed
+research networks located in the US and Europe. To allow PlanetLab to be a more
+accurate Internet testbed, researchers have attempted to make the network more
+representative of the Internet. A challenge to this is that we have an
+incomplete view of what should be considered "representative". We therefore
+focus on adding heterogeneity to PlanetLab to improve its likeness to the
+Internet.
+
+To function as a PlanetLab node, a site must meet certain resource and hardware
+standards. For example, the site must be a server class machine and publicly
+addressable by a static IP. These requirements allow PlanetLab to remain easily
+managed and used but are mostly only met by University machines. There is
+heterogeneity in university networks that is not represented in PlanetLab,
+however. We attempt to pinpoint the universities that have the most potential
+to increase PlanetLab diversity.  
+
+Our goal is to first determine in what ways PlanetLab is homogenous. For this,
+we look at number of hops, number of ASes and types of ASes traversed between
+PlanetLab nodes. Next we compare potential PlanetLab sites organized by
+geography, and determine in which location would nodes have a significant
+impact on PlanetLab. 
 
 
 %******************************************************************************
