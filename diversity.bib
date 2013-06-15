@@ -1,0 +1,957 @@
+% -*-BibTeX-*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% File:         isp_characterizing.bib
+% RCS:          $Id: isp_characterizing.bib,v 1.16 2010/07/09 21:13:26 fabianb Exp $
+% Description:  ISP Charac
+% Author:       Fabian E. Bustamante
+%               AquaLab Research Group
+%               EECS
+%               Northwestern University
+% Created:      Tue Jul 06, 2010 at 13:10:58
+% Language:     BibTeX
+% Package:      N/A
+% Status:       Experimental (Do Not Distribute)
+%
+% (C) Copyright 2008, Northwestern University, all rights reserved.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%********************************************************************************
+% Common strings
+%********************************************************************************
+
+
+% Journals
+
+@string{tse = "IEEE Transactions on Software Engineering"}
+@string{ton = "IEEE/ACM Transactions on Networking"}
+@string{tc = "IEEE Transactions on Computers"}
+@string{tpds = "IEEE Transaction on Parallel and Distributed Systems"}
+@string{tocs = "ACM Transactions on Computer Systems"}
+@string{toplas = "ACM Transactions on Programming Languages and
+Systems"}
+@string{jsac = "IEEE Journal on Selected Areas in Communication"}
+@string{sigcomm-ccr = "SIGCOMM Comput. Commun. Rev."}
+@string{osr-l = "ACM SIGOPS Operating Systems Review"}
+@string{osr = "ACM SIGOPS Op. Sys. Rev."}
+
+% Conferences
+@string{sosp-l = "Proc. of the ACM Symposium on Operating System Principles"}
+@string{sosp = "Proc. ACM SOSP"}
+
+@string{hotos-l = "Proc. of the Workshop on Hot Topics in Operating Systems"}
+@string{hotos = "Proc. of HotOS"}
+
+@string{imw-l = "Proc. ACM Internet Measurement Workshop (IMW)"}
+@string{imw = "Proc. ACM IMW"}
+
+@string{imc-l = "Proc. of the Internet Measurement Conference (IMC)"}
+@string{imc = "Proc. of IMC"}
+
+@string{wcw-l = "Proc. of the Workshop on {W}eb Content Caching and Distribution (WCW)"}
+@string{wcw = "Proc. WCW"}
+
+@string{osdi-l = "Proc. of the USENIX Operating Systems Design and Implementation (OSDI)"}
+@string{osdi = "Proc. USENIX OSDI"}
+
+
+@string{infocom = "Proc. IEEE INFOCOM"}
+
+@string{usenix-atc-l = "Proc. of the USENIX Annual Technical Conference"}
+@string{usenix-atc = "Proc. USENIX ATC"}
+
+@string{icccn = "Proc. of IEEE ICCCN"}
+@string{icccn-l = "Proc. of the IEEE International Conference on Computer Communications and Networks (ICCCN)"}
+
+@string{icnp-l = "Proc. of the IEEE International Conference on Network Protocols (ICNP)"}
+@string{icnp = "Proc. IEEE ICNP"}
+
+@string{sigcomm-l = "Proc. of the Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication (SIGCOMM)"}
+@string{sigcomm = "Proc. of ACM SIGCOMM"}
+
+@string{sigmetrics = "Proc. ACM SIGMETRICS"}
+
+@string{hotnets-l = "Proc. of the Workshop on Hot Topics in Networks (HotNets)"}
+@string{hotnets = "Proc. of HotNets"}
+
+@string{mascots-l = "Proc. of the IEEE/ACM International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS)"}
+
+@string{mascots = "Proc. IEEE/ACM MASCOTS"}
+
+@string{sc ="Proc. of ACM/IEEE conference on Supercomputing"}
+
+@string{usits-l = "Proc. of USENIX Symposium on Internet Technologies and Systems"}
+@string{usits = "Proc. USENIX USITS"}
+
+@string{hpdc="Proc. of the IEEE Internatinal Symposium on High Performance Distributed Computing"}
+
+@string{nsdi-l = "Proc. of the USENIX Symposium on Networked System Design and Implementation (NSDI)"}
+@string{nsdi = "Proc. of USENIX NSDI"}
+
+@string{iptps-l = "Proc. of the International Workshop on Peer-to-Peer Systems (IPTPS)"}
+@string{iptps = "Proc. IPTPS"}
+
+@string{pam-l = "Proc. of Passive and Active Measurement Workshop (PAM)"}
+
+@string{pam = "Proc. of PAM"}
+
+@string{worlds = "Proc. of the Workshop on Real, Large Distributed Systems (WORLDS)"}
+
+@string{podc = "Proc. of the Symposium on Principles of Distributed Computing (PODC)"}
+
+@string{icdcs-l = "Proc. of the International Conference on Distributed Computing Systems (ICDCS)"}
+
+@string{icdcs = "Proc. ICDCS"}
+
+@string{asplos-l = "Proc. of the International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)"}
+
+@string{asplos = "Proc. ASPLOS"}
+
+@string{nossdav-l = "Proc. of the ACM International Workshop on Network and Operating Systems Support for Digital Audio and Video (NOSSDAV)"}
+
+@string{nossdav = "Proc. ACM NOSSDAV"}
+
+@string{mmcn-l = "Proc. of the Annual Multimedia Computing and Networking Conference (MMCN)"}
+
+@string{mmcn = "Proc. MMCN"}
+
+@string{middleware = "Proc. of IFIP/ACM Middleware"}
+
+@string{ngc = "Proc. NGC Workshop"}
+
+@string{www-l = "Proc. of the International World Wide Web Conference"}
+
+@string{www = "Proc. WWW"}
+
+@string{ngc-l = "Proc. of the Workshop on Networked Group Communication"}
+
+@string{ndss = "Proc. NDSS"}
+
+@string{raid = "Proc. RAID"}
+
+@string{raid-l = "Proc. of the International Symposium on Recent Advances in Intrusion Detection (RAID)"}
+
+@string{sysml-l = "Proc. of the workshop on Tackling computer systems problems with machine learning techniques"}
+@string{sysml = "Proc. SysML"}
+
+@string{conext = "Proc. ACM CoNEXT"}
+
+@string{sigmod-l = "Proc. of the ACM SIGMOD international conference on Management of data"}
+@string{sigmod = "Proc. ACM SIGMOD"}
+
+@string{drcn-l = "Proc. of the International workshop on Design of Reliable Communication Networks (DRCN)"}
+@string{drcn = "Proc. DRCN"}
+
+@string{aaai-l = "Proc. of the American Association for Artificial Intelligence (AAAI)"}
+@string{aaai = "Proc. AAAI"}
+
+@string{dac-l = "Proc. of the 46th Annual Design Automation Conference"}
+@string{dac = "Proc. DAC"}
+
+@string{homenets-l = "Proc. of the ACM SIGCOMM Workshop on Home Networks (HomeNets)"}
+@string{homenets = "Proc. of HomeNets"}
+
+@string{wmust = "Proc. of W-MUST"}
+%********************************************************************************
+% Actual bib entries
+%********************************************************************************
+
+
+
+@Misc{balancing:slyck,
+  OPTkey =	 {},
+  author =	 {Thomas Mennecke},
+  title =	 {{DSL} Broadband Providers Perform Balancing Act},
+  howpublished = {\url{http://www.slyck.com/news.php?story=973}},
+  month =	 {November},
+  year =	 {2005},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+@Article{bittorrent:isp,
+  author =	 {Austin Carr},
+  title =	 {The Real {ISP} Report Card: Why {BitTorrent's} Network Performance Data is "Miles Better" than what {Netflix} found},
+  journal =	 {{FastCompany}},
+  year =	 {2011},
+  OPTkey =	 {},
+  OPTvolume =	 {},
+  OPTnumber =	 {},
+  OPTpages =	 {},
+  month =	 {February},
+  OPTnote = {\url{http://www.fastcompany.com/1728751/bittorrent-netflix-isp-report-card-sneak-peek-network-performance-data}},
+  OPTannote =	 {}
+}
+
+@Misc{netflix:isp,
+  author =	 {{Netflix, Inc.}},
+  title =	 {Netflix performance on top {ISP} networks},
+  howpublished = {\url{http://techblog.netflix.com/2011/01/netflix-performance-on-top-isp-networks.html}},
+  month =	 {January},
+  year =	 {2011},
+}
+
+@InProceedings{casado:spurious,
+  author =	 {Martin Casado and Tal Garfinkel and Weidong Cui and
+                  Vern Paxson and Stefan Savage},
+  title =	 {Opportunistic Measurement: Extracting Insight from
+                  Spurious Traffic},
+  booktitle =	 hotnets,
+  OPTcrossref =	 {},
+  OPTkey =	 {},
+  OPTpages =	 {},
+  year =	 {2005},
+  OPTaddress =	 {College Park, MD},
+  OPTmonth =	 {Nov.},
+}
+
+
+
+@TechReport{wills:dns,
+  author = 	 {Craig Wills and Hao Shang},
+  title = 	 {The contribution of {DNS} Lookup Costs to {Web} object retrieval},
+  institution =  {Worcester Polytechnic Institute},
+  year = 	 {2000},
+  OPTkey = 	 {},
+  OPTtype = 	 {},
+  number = 	 {WPI-CS-TR-00-12},
+  OPTaddress = 	 {},
+  OPTmonth = 	 {July},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+
+@INPROCEEDINGS{cho:p2p,
+  author =	 {Kenjiro Cho and Kensuke Fukuda and Hiroshi Esaki and
+                  Akira Kato},
+  title =	 {The impact and implications of the growth in
+                  residential user-to-user traffic},
+  booktitle =	 sigcomm,
+  year =	 {2006},
+  OPTaddress =	 {Pisa, Italy},
+  OPTmonth =	 {September}
+}
+
+@InProceedings{choffnes:news,
+  author =	 {David R. Choffnes and Fabi\'an E. Bustamante and
+                  Zihui Ge},
+  title =	 {Crowdsourcing Service-Level Network Event Detection},
+  booktitle =	 sigcomm,
+  year =	 {2010},
+  OPTkey =	 {},
+  OPTtype =	 {},
+  OPTnumber =	 {},
+  OPTaddress =	 {New Delhi, India},
+  OPTmonth =	 {August},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+@InProceedings{choffnes:ono,
+  author =	 {David R. Choffnes and Fabi\'an E. Bustamante},
+  title =	 {Taming the Torrent: A Practical Approach to Reducing
+                  Cross-{ISP} traffic in peer-to-peer systems},
+  booktitle =	 sigcomm,
+  year =	 {2008},
+  OPTkey =	 {},
+  OPTtype =	 {},
+  OPTnumber =	 {},
+  OPTaddress =	 {Seattle, WA},
+  OPTmonth =	 {Aug.},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+
+
+@InProceedings{huitema:dns,
+  author = 	 {C. Huitema and S. Weerahandi},
+  title = 	 {Internet measurements: The rising tide and the {DNS} snag},
+  OPTcrossref =  {},
+  OPTkey = 	 {},
+  OPTbooktitle = {{ITC} Specialist Seminar on {Internet} traffic measurement and modelling},
+  OPTyear = 	 {2000},
+  OPTeditor = 	 {},
+  OPTvolume = 	 {},
+  OPTnumber = 	 {},
+  OPTseries = 	 {},
+  OPTpages = 	 {},
+  OPTmonth = 	 {September},
+  OPTaddress = 	 {Monterrey, CA},
+  OPTorganization = {},
+  OPTpublisher = {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@InProceedings{jung:dns,
+  author = 	 {Jaeteon Jung and Emil Sit and Hari Balakrishnan},
+  title = 	 {{DNS} performance and effectiveness of caching},
+  OPTcrossref =  {},
+  OPTkey = 	 {},
+  booktitle = imw,
+  year = 	 {2001},
+  OPTeditor = 	 {},
+  OPTvolume = 	 {},
+  OPTnumber = 	 {},
+  OPTseries = 	 {},
+  OPTpages = 	 {},
+  OPTmonth = 	 {November},
+  OPTaddress = 	 {San Francisco, CA},
+  OPTorganization = {},
+  OPTpublisher = {},
+  OPTnote = 	 {},
+  OPTannote = 	 {}
+}
+
+@inproceedings{dicioccio:pray,
+      author    = {Lucas DiCioccio and Renata Teixeira and Martin May and Christian Kreibich},
+      title     = {Probe and Pray: Using UPnP for Home Network Measurements},
+      booktitle = {PAM},
+      year      = {2012},
+      pages     = {96-105},
+      ee        = {http://dx.doi.org/10.1007/978-3-642-28537-0_10},
+      crossref  = {DBLP:conf/pam/2012},
+      bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@InProceedings{cioccio:homenet,
+  author =	 {Lucas Di Cioccio and Renata Teixeira and Catherine
+                  Rosenberg},
+  title =	 {Impact of Home Networks on End-to-End Performance:
+                  Controlled Experiments},
+  booktitle =	 homenets,
+  OPTcrossref =	 {},
+  OPTkey =	 {},
+  OPTpages =	 {},
+  year =	 {2010},
+  OPTeditor =	 {},
+  OPTvolume =	 {},
+  OPTnumber =	 {},
+  OPTseries =	 {},
+  OPTaddress =	 {New Delhi, India},
+  OPTmonth =	 {September},
+  OPTorganization ={},
+  OPTpublisher = {},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+@InProceedings{croce:adsl,
+  author =	 {Daniele Croce and Taoufik En-Najjary and Guillaume
+                  Urvoy-Keller and Ernst W. Biersak},
+  title =	 {Fast available bandwidth sampling for {ADSL} Links:
+                  Rethinking the estimation for large-scale
+                  measurements},
+  booktitle =	 pam,
+  year =	 {2009},
+  month =	 {April}
+}
+
+@InProceedings{croce:capacityestimation,
+    author = {Daniele Croce and Taoufik En-najjary and Guillaume Urvoy-keller and Ernst W. Biersack},
+    title = {Capacity Estimation of ADSL links},
+    booktitle = conext,
+    year = {2008}
+}
+
+@inproceedings{dicioccio:controlled,
+  author =	 {Lucas Di Cioccio and Renata Tiexeira and Catherine
+                  Rosenberg},
+  title =	 {Impact of Home Networks on End-to-End Performance:
+                  Controlled Experiments},
+  booktitle =	 homenets,
+  year =	 {2010},
+  OPTisbn =	 {978-1-60558-771-4},
+  OPTpages =	 {103--115},
+  OPTlocation =	 {Chicago, Illinois, USA},
+  OPTdoi =	 {http://doi.acm.org/10.1145/1644893.1644905},
+  OPTpublisher = {ACM},
+  OPTaddress =	 {New York, NY, USA},
+}
+
+@inproceedings{dischinger:glasnost,
+  author =	 {Marcel Dischinger and Massimiliano Marcon and Saikat
+                  Guha and Krishna P. Gummadi and Ratul Mahajan and
+                  Stefan Saroiu},
+  title =	 {Glasnost: Enabling End Users to Detect Traffic
+                  Differentiation},
+  booktitle =	 nsdi,
+  year =	 {2010}
+}
+
+@inproceedings{dischinger:satellitelab,
+  author = {Marcel Dischinger and Krishna P. Gummadi and 
+      Andreas Haeberlen and Stefan Saroiu and Ivan Beschastnikh},
+  title = {SatelliteLab: Adding Heterogeneity to Planetary-Scale Network Testbeds},
+  booktitle=sigcomm,
+  year = {2008}
+}
+
+@InProceedings{dischinger:residential,
+  author =	 {Marcel Dischinger and Krishna P. Gummadi and Andreas
+                  Haeberlen and Stefan Saroiu},
+  title =	 {Characterizing Residential Broadband Networks},
+  booktitle =	 imc,
+  year =	 {2007},
+  OPTaddress =	 {San Diego, CA},
+  OPTmonth =	 {October}
+}
+
+
+@InProceedings{canadi:reivisting,
+  author =	 {Igor Canadi and Paul Barford and Joel Sommers},
+  title =	 {Revisiting Broadband Performance},
+  booktitle =	 imc,
+  year =	 {2012},
+  OPTaddress =	 {Boston, MA},
+  OPTmonth =	 {November}
+}
+
+
+@inproceedings{maier:dominant,
+ author = {Maier, Gregor and Feldmann, Anja and Paxson, Vern and Allman, Mark},
+ title = {On dominant characteristics of residential broadband internet traffic},
+  booktitle =	 imc,
+ year = {2009},
+} 
+
+@Article{gross:infoworld,
+  author =	 {Grant Gross},
+  title =	 {New broadband projects score \$795 million in
+                  funding},
+  journal =	 {{InfoWorld}},
+  year =	 {2010},
+  OPTkey =	 {},
+  OPTvolume =	 {},
+  OPTnumber =	 {},
+  OPTpages =	 {},
+  OPTmonth =	 {July 2},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+@Article{infoworld,
+  author =	 {Grant Gross},
+  title =	 {New broadband projects score \$795 million in
+                  funding},
+  journal =	 {{InfoWorld}},
+  year =	 {2010},
+  OPTkey =	 {},
+  OPTvolume =	 {},
+  OPTnumber =	 {},
+  OPTpages =	 {},
+  OPTmonth =	 {July 2},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+@Misc{keynote,
+  author =	 {Keynote},
+  title =	 {Internet Health Report},
+  howpublished = {\url{http://internetpulse.net/}},
+}
+
+@InProceedings{kreibich:netalyzr,
+  author =	 {Christian Kreibich and Nicholas Weaver and Boris
+                  Nechaev and Vern Paxson},
+  title =	 {Netalyzr: Illuminating The Edge Network},
+  booktitle =	 imc,
+  year =	 {2010},
+  OPTaddress =	 {Melbourne, Australia},
+  OPTmonth =	 {November},
+}
+
+@InProceedings{lakshmi:broadband,
+  author =	 {Karthik Lakshminarayanan and Venkata N. Padmanabhan},
+  title =	 {Some Findings on the Network Performance of
+                  Broadband Hosts},
+  booktitle =	 imc,
+  OPTcrossref =	 {},
+  OPTkey =	 {},
+  OPTpages =	 {},
+  year =	 {2003},
+  OPTeditor =	 {},
+  OPTvolume =	 {},
+  OPTnumber =	 {},
+  OPTseries =	 {},
+  OPTaddress =	 {Miami, FL},
+  month =	 {October},
+  OPTorganization ={},
+  OPTpublisher = {},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+@InProceedings{mahajan:netdiff,
+  author =	 {Ratul Mahajan and Ming Zhang and Lindsey Poole and
+                  Vivek Pai},
+  title =	 {Uncovering performance differences among backbone
+                  {ISP}s with {N}etdiff},
+  booktitle =	 nsdi,
+  year =	 {2008},
+  OPTaddress =	 {San Francisco, CA},
+  OPTmonth =	 {April},
+}
+
+@TechReport{ofcom:uk09,
+  author =	 {{Office of Communication (Ofcom)}},
+  title =	 {{UK} broadband speeds 2009: Consumers' experience of
+                  fixed-line broadband performance},
+  institution =	 {Ofcom},
+  year =	 {2009},
+  OPTkey =	 {},
+  OPTtype =	 {},
+  OPTnumber =	 {},
+  address =	 {London, UK},
+  month =	 {July},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+@TechReport{dicioccio:homenet,
+  author =	 {Lucas {DiCioccio} and Renata Teixeira and Catherine Rosenberg},
+  title =	 {Characterizing home networks with {HomeNet} profiler},
+  institution =	 {Technicolor},
+  year =	 {2011},
+  OPTkey =	 {},
+  type =	 {Technical Report},
+  number =	 {CP-PRL-2011-09-0001},
+  OPTaddress =	 {},
+  month =	 {September},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+@TechReport{ofcom:uk10,
+  author =	 {{Office of Communication (Ofcom)}},
+  title =	 {{UK} fixed broadband speeds, {November/December} 2010},
+  year =	 {2011},
+  address =	 {London, UK},
+  month =	 {March}
+}
+
+@InProceedings{otto:bt,
+  author =	 {John S. Otto and Mario A. Sanchez and David
+                  R. Choffnes and Fabian E. Bustamante and Georgos
+                  Siganos},
+  title =	 {On Blind Mice and the Elephant -- Understanding the
+                  Network Impact of a Large Distributed System},
+  booktitle =	 sigcomm,
+  year =	 {2011},
+  OPTkey =	 {},
+  OPTtype =	 {},
+  OPTnumber =	 {},
+  OPTaddress =	 {Toronto, Canada},
+  OPTmonth =	 {August},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+@Article{paxson:e2e,
+  author =	 {Vern Paxson},
+  title =	 {End-to-End Routing Behavior in the {Internet}},
+  journal =	 ton,
+  year =	 {1999},
+  OPTkey =	 {},
+  volume =	 {5},
+  number =	 {5},
+  OPTpages =	 {},
+  month =	 {October},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+@Article{paxson:e2e-packet,
+  author =	 {Vern Paxson},
+  title =	 {End-to-End {Internet} Packet Dynamics},
+  journal =	 ton,
+  year =	 {1999},
+  OPTkey =	 {},
+  volume =	 {7},
+  number =	 {3},
+  OPTpages =	 {},
+  month =	 {June},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+@InProceedings{ritacco:hmn,
+  author =	 {Alan Ritacco and Craig Wills and Mark Claypool},
+  title =	 {How's my Network? {A Java} Approach to Home Network
+                  Measurement},
+  booktitle =	 icccn,
+  OPTcrossref =	 {},
+  OPTkey =	 {},
+  OPTpages =	 {},
+  year =	 {2009},
+  OPTeditor =	 {},
+  OPTvolume =	 {},
+  OPTnumber =	 {},
+  OPTseries =	 {},
+  OPTaddress =	 {San Francisco, CA},
+  OPTmonth =	 {August},
+  OPTorganization ={},
+  OPTpublisher = {},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+
+@Misc{vuze:www,
+  key =		 {bittorrent},
+  author =	 {{Vuze, Inc.}},
+  title =	 {Vuze},
+  note = {\url{http://www.vuze.com}},
+  OPTmonth =	 {Sep.},
+  OPTyear =	 {2008},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+
+@Misc{ripe:www,
+  key =		 {ripe atlas},
+  author =	 {{RIPE NCC}},
+  title =	 {{RIPE} Atlas},
+  note = {\url{http://atlas.ripe.net}},
+}
+
+@InProceedings{jain:pathload,
+   author = {Manish Jain and Constantinos Dovrolis},
+   title = {Pathload: A Measurement Tool for End-to-End Available Bandwidth},
+   booktitle = {Proc. of {PAM}},
+   year = {2002},
+   OPTpages = {14--25}
+}
+@Misc{samknows:fcc,
+  OPTkey =	 {},
+  author =	 {SamKnows},
+  title =	 {SamKnows \& the {FCC} {American} broadband
+                  performance measurement},
+  howpublished =
+                  {\url{http://www.samknows.com/broadband/fcc_and_samknows}},
+  month =	 {June},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+@Misc{samknows:ofcom,
+  OPTkey =	 {},
+  author =	 {SamKnows},
+  title =	 {SamKnows \& {Ofcom} {UK} broadband performance
+                  testing},
+  howpublished =
+                  {\url{http://www.samknows.com/broadband/ofcom_and_samknows}},
+  month =	 {June},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+
+
+@InProceedings{siekkinen:adsl,
+  author =	 {M. Siekkinen and D. Collange and G. Urvoy-Keller and
+                  E. W. Biersack},
+  title =	 {Performance Limitatiosn of {ADSL} Users: A Case
+                  Study},
+  booktitle =	 pam,
+  OPTcrossref =	 {},
+  OPTkey =	 {},
+  OPTpages =	 {},
+  year =	 {2007},
+  OPTeditor =	 {},
+  OPTvolume =	 {},
+  OPTnumber =	 {},
+  OPTseries =	 {},
+  address =	 {Louvain-la-Neuve, Belgium},
+  month =	 {April},
+  OPTorganization ={},
+  OPTpublisher = {},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+@Misc{us-census-bureau,
+  author =	 {US Census Bureau},
+  title =	 {Census Regions and Divisions of the United States},
+  howpublished = {\url{http://www.census.gov/}},
+}
+
+@Misc{youtube:myspeed,
+  author =	 {{YouTube}},
+  title =	 {{YouTube} Video Speed History},
+  howpublished = {\url{http://www.youtube.com/my_speed}},
+}
+
+@Misc{speedtest,
+  author =	 {Speedtest.net},
+  title =	 {The Global Broadband Speed Test},
+  howpublished = {\url{http://www.speedtest.net/}},
+}
+
+@Misc{samknows,
+  author =	 {{SamKnows}},
+  title =	 {Accurate Broadband Information for consumers,
+                  governments and {ISPs}},
+  howpublished = {\url{http://www.samknows.com/}},
+}
+
+@Misc{nanog,
+  author =	 {{NANOG Mailing List}},
+  title =	 {{FCC} Released {Internet} speed tool},
+  month =	 {March},
+  year =	 {2010},
+  day =		 {12}
+}
+
+@inproceedings{zhang:netpolice,
+  author =	 {Ying Zhang and Zhuoqing Morley Mao and Ming Zhang },
+  title =	 {Detecting traffic differentiation in backbone {ISPs}
+                  with {NetPolice}},
+  booktitle =	 imc,
+  year =	 {2009},
+  OPTisbn =	 {978-1-60558-771-4},
+  OPTpages =	 {103--115},
+  OPTlocation =	 {Chicago, Illinois, USA},
+  OPTdoi =	 {http://doi.acm.org/10.1145/1644893.1644905},
+  OPTpublisher = {ACM},
+  OPTaddress =	 {New York, NY, USA},
+}
+
+@inproceedings{bischof:wmust12,
+  title={Up, down and around the stack: ISP characterization from network intensive applications},
+  author={Bischof, Z.S. and Otto, J.S. and Bustamante, F.E.},
+  booktitle={Proceedings of the 2012 ACM SIGCOMM workshop on Measurements up the stack},
+  pages={13--18},
+  year={2012},
+  organization={ACM}
+}
+
+@misc{samknows:charge,
+  title = {Get {SamKnows} Today},
+  key = {get samknows},
+  note = {\url{http://www.samknows.com/broadband/buy_whitebox}},
+}
+
+@inproceedings{bischof:wmust11,
+author = { Zachary S. Bischof and John S. Otto and Mario A. S\'{a}nchez
+  		and John P. Rula and David R. Choffnes and Fabi\'{a}n E. Bustamante},
+ title = {Crowdsourcing {ISP} characterization to the network edge},
+ booktitle = wmust,
+ year = {2011},
+ keywords = {characterization},
+} 
+
+@InProceedings{dabek:vivaldi,
+  author =	 {Dabek and Cox and Kaashoek and Robert Morris},
+  title =	 {Vivaldi: A decentralized network coordinate system},
+  booktitle =	 sigcomm,
+  OPTcrossref =	 {},
+  OPTkey =	 {},
+  OPTpages =	 {},
+  year =	 {2004},
+  OPTeditor =	 {},
+  OPTvolume =	 {},
+  OPTnumber =	 {},
+  OPTseries =	 {},
+  OPTaddress =	 {Portland, OR},
+  OPTmonth =	 {Aug.-Sep.},
+  OPTOPTorganization ={},
+  OPTpublisher = {},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+@Misc{azureus:www,
+  key =		 {bittorrent},
+  author =	 {{Vuze, Inc.}},
+  title =	 {Vuze},
+  howpublished = {http://www.vuze.com},
+  OPTmonth =	 {Sep.},
+  OPTyear =	 {2008},
+  OPTnote =	 {},
+  OPTannote =	 {}
+}
+
+@Misc{mlab:ndt,
+  author =	 {MLabs},
+  title =	 {Network Diagnostic Tool},
+  note =	 {\url{http://www.measurementlab.net/run-ndt/}},
+  OPTkey =	 {},
+  OPTmonth =	 {},
+  OPTyear =	 {},
+  OPTannote =	 {}
+}
+
+@book{kurose:networking,
+  author    = {James F. Kurose and
+               Keith W. Ross},
+  title     = {Computer networking},
+  publisher = {Addison-Wesley},
+  year      = {2010},
+  edition = {5th},
+  OPTisbn      = {978-0-201-47711-5},
+  OPTpages     = {I-XXIV, 1-712},
+  OPTbibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{sundaresan:nutrition,
+ author = {Sundaresan, Srikanth and Feamster, Nick and Teixeira, Renata and Tang, Anthony and Edwards, W. Keith and Grinter, Rebecca E. and Chetty, Marshini and de Donato, Walter},
+ title = {Helping users shop for {ISPs} with internet nutrition labels},
+ booktitle = homenets,
+ OPTseries = {HomeNets '11},
+ year = {2011},
+ OPTisbn = {978-1-4503-0798-7},
+ OPTlocation = {Toronto, Ontario, Canada},
+ OPTpages = {13--18},
+ OPTnumpages = {6},
+ OPTurl = {http://doi.acm.org/10.1145/2018567.2018571},
+ OPTdoi = {10.1145/2018567.2018571},
+ OPTacmid = {2018571},
+ OPTpublisher = {ACM},
+ OPTaddress = {New York, NY, USA},
+ OPTkeywords = {access networks, benchmarking, bismark, broadband networks, gateway measurements},
+}
+
+@inproceedings{bismark,
+ author = {Sundaresan, Srikanth and de Donato, Walter and Feamster, Nick and Teixeira, Renata and Crawford, Sam and Pescap\`{e}, Antonio},
+ title = {Broadband internet performance: a view from the gateway},
+ booktitle = sigcomm,
+ OPTseries = {SIGCOMM '11},
+ year = {2011},
+ OPTisbn = {978-1-4503-0797-0},
+ OPTlocation = {Toronto, Ontario, Canada},
+ OPTpages = {134--145},
+ OPTnumpages = {12},
+ OPTurl = {http://doi.acm.org/10.1145/2018436.2018452},
+ OPTdoi = {10.1145/2018436.2018452},
+ OPTacmid = {2018452},
+ OPTpublisher = {ACM},
+ OPTaddress = {New York, NY, USA},
+ OPTkeywords = {access networks, benchmarking, bismark, broadband networks},
+} 
+
+@inproceedings{kreibich:netalyzr,
+ author = {Kreibich, Christian and Weaver, Nicholas and Nechaev, Boris and Paxson, Vern},
+ title = {Netalyzr: illuminating the edge network},
+ booktitle = imc,
+ year = {2010},
+} 
+
+@misc{grenouille:www,
+  title = {Grenouille},
+  key = {grenouille},
+  note = {\url{http://grenouille.com}},
+}
+
+@INPROCEEDINGS{simpson:netiathome,
+    author = {Charles Robert Simpson and Jr. and George F. Riley},
+    title = {NETI@home: A Distributed Approach to Collecting End-to-End Network Performance Measurements},
+    booktitle = pam,
+    year = {2004},
+}
+
+@article{joumblatt:endhosts,
+ author = {Joumblatt, Diana and Teixeira, Renata and Chandrashekar, Jaideep and Taft, Nina},
+ title = {Perspectives on tracing end-hosts: a survey summary},
+ journal = ccr,
+ issue_date = {April 2010},
+ volume = {40},
+ number = {2},
+ month = apr,
+ year = {2010},
+ pages = {51--55},
+}
+
+@inproceedings{bernardi:bsense,
+ author = {Bernardi, Giacomo and Marina, Mahesh K.},
+ title = {BSense: a system for enabling automated broadband census: short paper},
+ booktitle = {Proc. of NSDR},
+ year = {2010},
+}
+
+@inproceedings{aggarwal:netprints,
+ author = {Aggarwal, Bhavish and Bhagwan, Ranjita and Das, Tathagata and Eswaran, Siddharth and Padmanabhan, Venkata N. and Voelker, Geoffrey M.},
+ title = {NetPrints: diagnosing home network misconfigurations using shared knowledge},
+ booktitle = nsdi,
+ year = {2009},
+ pages = {349--364},
+} 
+
+@inproceedings{yang:homnet,
+ author = {Yang, Jeonghwa and Edwards, W. Keith},
+ title = {A study on network management tools of householders},
+ booktitle = homenets,
+ year = {2010},
+ pages = {1--6},
+}
+
+@inproceedings{sanchez:pam13,
+    author = {Mario A. S\'{a}nchez, John S. Otto, Zachary S. Bischof, Fabi\'an E. Bustamante}
+    title = {Trying broadband characterization at home},
+    booktitle = pam,
+    year = {2013},
+}
+
+@inproceedings{bough:beholder,
+ author = {Bouch, Anna and Kuchinsky, Allan and Bhatti, Nina},
+ title = {Quality is in  the eye of the beholder: meeting users' requirements for Internet quality of service},
+ booktitle = {Proc. of the SIGCHI conference on Human Factors in Computing Systems},
+ series = {CHI '00},
+ year = {2000},
+} 
+
+@inproceedings{wang:wprof,
+  author =	 {Xiao Sophia Wang, Aruna Balasubramanian, Arvind Krishnamurthy, and David Wetherall, University of Washington},
+  title =	 {Demystifying Page Load Performance with WProf},
+  booktitle =	 nsdi,
+  year =	 {2013}
+}
+
+@Misc{openwrt,
+  key =		 {openwrt},
+  author =	 {{The OpenWrt Developers}},
+  title =	 {OpenWrt Wireless Freedom},
+  howpublished = {\url{http://https://openwrt.org}},
+  month =	 {December},
+  year =	 {2011},
+}
+
+@Misc{upnp:flaws,
+  author =	 {{Jeff Goldman}},
+  title =	 {US-CERT, Rapid7 Warn of Massive UPnP Security Flaws},
+  howpublished = {\url{http://www.esecurityplanet.com/network-security/us-cert-rapid7-warn-of-massive-upnp-security-flaws.html}},
+  month =	 {January},
+  year =	 {2013},
+}
+
+@Misc{upnp:vulnerability,
+  author =	 {{Homeland Security}},
+  title =	 {Vulnerability Note VU#922681 - Portable SDK for UPnP Devices (libupnp) contains multiple buffer overflows in SSDP},
+  howpublished = {\url{http://www.kb.cert.org/vuls/id/922681}},
+  month =	 {January},
+  year =	 {2013},
+}
+
+@Misc{upnp:patch1,
+  author =	 {{Marcelo Roberto Jimenez}},
+  title =	 {Security fix for CERT issue VU\#922681},
+  howpublished = {\url{http://pupnp.sourceforge.net/ChangeLog}},
+  month =	 {December},
+  year =	 {2012},
+}
+
+
+@Misc{upnp:flaws2,
+  author =	 {{HD Moore}},
+  title =	 {Security Flaws in Universal Plug and Play: Unplug, Don't Play},
+  howpublished = {\url{https://community.rapid7.com/community/infosec/blog/2013/01/29/security-flaws-in-universal-plug-and-play-unplug-dont-play}},
+  month =	 {January},
+  year =	 {2013},
+}
+
+
+

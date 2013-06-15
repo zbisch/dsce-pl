@@ -1,0 +1,111 @@
+% -*-LaTeX-*-
+
+\documentclass{sig-alternate-10pt}
+
+\clubpenalty=10000 
+\widowpenalty = 10000
+\hyphenpenalty=5000
+\tolerance=1000
+
+%\usepackage{latexsym}
+\usepackage[caption=false]{subfig}
+\usepackage[sort]{cite}
+\usepackage[hyphens]{url}
+\usepackage{lastpage}
+\usepackage{array, verbatim}
+\usepackage{mdwlist}
+\usepackage{multirow}
+\usepackage{times}
+
+\usepackage{hyperref,zref,xkeyval,pdfcomment}
+\newcommand\todo[1]{\pdfcomment{#1}}
+%\newcommand\todo[1]{}
+
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+
+\usepackage{ifpdf}
+\usepackage{graphicx}
+
+\graphicspath{{./figs/}}
+
+\ifpdf
+  \DeclareGraphicsExtensions{.pdf}
+\else
+  \DeclareGraphicsExtensions{.eps}
+\fi
+
+%\newcommand{\enote}[2]{({\bf{#1:} \it{#2}})}
+\newcommand{\enote}[2]{}
+
+\def\full{0.8\linewidth}
+\def\half{0.45\linewidth}
+\def\third{0.30\linewidth}
+
+\begin{document}
+
+
+
+\title{Adding Heterogeneity to PlanetLab}
+
+\numberofauthors{2}
+\author{
+\alignauthor
+Angela H. Jiang\\
+\affaddr{angelajiang@u.northwestern.edu}
+\alignauthor
+Zachary S. Bischof\\
+\affaddr{Northwestern University}\\
+\affaddr{zbischof@eecs.northwestern.edu}
+}
+
+
+\maketitle
+%******************************************************************************
+\begin{abstract}
+
+\end{abstract}
+
+%******************************************************************************
+\section{Introduction}
+
+
+%******************************************************************************
+\section{Related Work} 
+
+While measuring from well-connected hosts inside academic networks, Dischinger
+et al.~\cite{dischinger:residential} characterized residential broadband
+connections by sending packet trains to end-hosts. They included measurements
+such as download and upload throughput, round-trip times and jitter, packet
+loss rates, queue lengths, and queue drop policies. 
+
+SatelliteLab~\cite{dischinger:satellitelab} 
+
+
+%******************************************************************************
+\section{Methodology}
+
+\subsection{Selection of remote hosts}
+
+%******************************************************************************
+\section{Results}
+
+Metrics used for comparison:
+
+\begin{enumerate}
+\item Latency
+\item Throughput
+\item Paths (AS paths?)
+\item Number of ASes
+\end{enumerate}
+
+
+%******************************************************************************
+\section{Conclusion}
+
+
+%******************************************************************************
+\bibliographystyle{abbrv}
+\bibliography{diversity}
+
+\end{document}
