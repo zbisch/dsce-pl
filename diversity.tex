@@ -354,11 +354,8 @@ be carried over small transit providers instead of large transit providers or
 tier 1 providers. Therefore, we note that traffic to these other destinations
 is more likely to be traversing not only different networks, but
 \emph{different kinds} of networks. This would be useful for researchers that
-wish to test their systems on networks that rae more likely to be traversing
+wish to test their systems on networks that are more likely to be traversing
 such providers. 
-
-
-transit providers and tier 1 providers, 
 
 
 %******************************************************************************
@@ -376,6 +373,20 @@ minimum number of nodes that  provide a significant impact.
 %******************************************************************************
 \section{Conclusion}
 
+Our work measures various network qualities of PlanetLab in order to determine in 
+what ways PlanetLab hosts are homogenous. Specifically, we look at number of hops,
+number of ASes and the types of ASes seen in traceroutes between PlanetLab and other 
+university sites. Our compare measurements between 694 existing PlanetLab nodes and 
+7010 potential new sites aggregated by geography.
+
+Looking into the types of ASes traversed shows how interconnectivity of South 
+American and African sites may differ from PlanetLab. While we see that paths between 
+South American or African site are likely to traverse a tier 1 or large transit 
+provider, approximately 97\% of median paths between PlanetLab nodes do not. In 
+contrast, a large portion of PlanetLab traffic is routed through small transit 
+providers; while the 50th percentile, paths between South America and Africa do not 
+cross over any. We expect increasing heterogeneity of types of ASes traversed can be 
+beneficial to researchers.
 
 %******************************************************************************
 \bibliographystyle{abbrv}
