@@ -8,7 +8,7 @@
 \tolerance=1000
 
 %\usepackage{latexsym}
-\usepackage[caption=false]{subfig}
+%\usepackage[caption=false]{subfig}
 \usepackage[sort]{cite}
 \usepackage[hyphens]{url}
 \usepackage{lastpage}
@@ -16,6 +16,9 @@
 \usepackage{mdwlist}
 \usepackage{multirow}
 \usepackage{times}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 
 \usepackage{hyperref,zref,xkeyval,pdfcomment}
 \newcommand\todo[1]{\pdfcomment{#1}}
@@ -91,7 +94,8 @@ node.
 PlanetLab is a testbed for researchers in computer networking and distributed
 systems. Although not part of its original purpose, many researchers have
 leveraged PlanetLab for conducting measurements of the Internet.  In general,
-most of its nodes are hosted in university networks.\cite{banerjee:connectivity}
+most of its nodes are hosted in university
+networks~\cite{banerjee:connectivity}.
 
 However, due to the nature of its design, various network aspects of PlanetLab
 nodes are found to be generally homogeneous. Sites are mostly connected to high
@@ -116,7 +120,7 @@ addressable by a static IP and hostname. These requirements allow PlanetLab
 nodes to be easily managed by a remote system but is usually satisfied by
 machines in University networks.  Additionally, in order to use PlanetLab for
 experimentation, a researcher must purchase hardware and set up their own
-PlanetLab site.\cite{dischinger:satellitelab}
+PlanetLab site~\cite{dischinger:satellitelab}.
 
 The combination of both these requirements as well as the system of incentives
 for creating a PlanetLab site, result in the majority of PlanetLab nodes being
@@ -146,18 +150,19 @@ America while 74\% are in North American research ASes. Traffic between PlanetLa
 traversed 80 ASes, only 8\% of the 1123 existing ASes at the time. We are therefore
 motivated to measure potential heterogeneity of other sites on the GREN.
 
-Other works have also attempted to quantify PlanetLab’s heterogeneity. Banerjee et al.
-\cite{banerjee:connectivity} compared qualities of PlanetLab’s nodes on research and 
-commercial networks. Dischinger et al.\cite{dischinger:satellitelab}, looked 
-at how adding hosts on edge networks could affect PlanetLab. By increasing a subset of 
-PlanetLab sites with 10\% worth of edge nodes, the number of AS links tripled. This 
-motivates their project, which integrates edge nodes to PlanetLab’s infrastructure. Under
+Other works have also attempted to quantify PlanetLab’s heterogeneity. Banerjee
+et al.~\cite{banerjee:connectivity} compared qualities of PlanetLab’s nodes on
+research and commercial networks. Dischinger et
+al.~\cite{dischinger:satellitelab}, looked at how adding hosts on edge networks
+could affect PlanetLab. By increasing a subset of PlanetLab sites with 10\%
+worth of edge nodes, the number of AS links tripled. This motivates their
+project, which integrates edge nodes to PlanetLab’s infrastructure. Under
 SatelliteLab~\cite{dischinger:satellitelab}, the university connected network
 remains central to PlanetLab.  Our attempt to increase the diversity of
 university hosts would only add to the heterogeneity this project achieves.
 
 While measuring from well-connected hosts inside academic networks, Dischinger
-et al.\cite{dischinger:residential} characterized residential broadband
+et al.~\cite{dischinger:residential} characterized residential broadband
 connections by sending packet trains to end-hosts. They included measurements
 such as download and upload throughput, round-trip times and jitter, packet
 loss rates, queue lengths, and queue drop policies. 
@@ -237,47 +242,79 @@ metrics.
 \begin{figure}
 \centering
     \includegraphics[width=1.0\linewidth]{figs/number_of_hops.pdf}
-    \caption{Mean and median number of hops for PlanetLab and African
-and South American Sites}
+    \caption{Mean and median number of hops for paths between PlanetLab nodes and 
+paths between PlanetLab nodes to university networks in Africa and South America.}
     \label{fig:num_hops}
 \end{figure}
 
 First, we compare the number of end-to-end hops between our two sets of nodes.
 Figure~\ref{fig:num_hops} shows the median and mean number of hops for both the
 PlanetLab-to-PlanetLab paths and the paths from PlanetLab nodes to universities
-in South America and Africa. 
+in South America and Africa. Here we se that, in general, paths from PlanetLab
+sites to nodes in Africa and South America see slightly fewer hops at most
+percentiles. The only exception to this appears at the tail of the
+distribution, the longest paths appear to be to our diversity set of nodes.
 
 \subsection{Number of AS hops}
 
 \begin{figure}
 \centering
     \includegraphics[width=1.0\linewidth]{figs/number_of_ases.pdf}
-    \caption{Mean and median number of unique ASes for PlanetLab and African
-and South American Sites}
+    \caption{Mean and median number of unique ASes for paths between PlanetLab nodes and 
+paths between PlanetLab nodes to university networks in Africa and South America.}
+    \label{fig:num_ases}
 \end{figure}
+
+Next, in a manner similar to the previous section, we look at the number of
+unique ASes between on paths in our two datasets. Figure~\ref{fig:num_ases}
+shows a CDF of the mean and median number of unique ASes seen on paths in our
+dataset. As with the previous section, we find that, in general, there are
+fewer ASes on paths between these two datasets. At the 50th percentile, the
+median number of ASes drops from 5 to 4 between the two datasets. At most
+percentiles, we see that in the median path, there is one less AS being
+traversed.
 
 \subsection{Types of ASes}
 
-\begin{figure}
+\begin{figure*}
+\centering
+\begin{subfigure}[b]{0.45\textwidth}
 \centering
     \includegraphics[width=1.0\linewidth]{figs/fractions_of_types-ltp.pdf}
-    \caption{Mean and median number of unique ASes for PlanetLab and African
-and South American Sites}
-\end{figure}
-
-\begin{figure}
-\centering
-    \includegraphics[width=1.0\linewidth]{figs/fractions_of_types-stp.pdf}
-    \caption{Mean and median number of unique ASes for PlanetLab and African
-and South American Sites}
-\end{figure}
-
-\begin{figure}
+    \caption{Large transit providers}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
 \centering
     \includegraphics[width=1.0\linewidth]{figs/fractions_of_types-tier1.pdf}
-    \caption{Mean and median number of unique ASes for PlanetLab and African
-and South American Sites}
-\end{figure}
+    \caption{Tier 1 providers}
+\end{subfigure}
+
+\begin{subfigure}[b]{0.45\textwidth}
+\centering
+    \includegraphics[width=1.0\linewidth]{figs/fractions_of_types-stp.pdf}
+    \caption{Small transit providers}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+\centering
+    \includegraphics[width=1.0\linewidth]{figs/fractions_of_types-ahp.pdf}
+    \caption{Hosting providers}
+\end{subfigure}
+
+\begin{subfigure}[b]{0.45\textwidth}
+\centering
+    \includegraphics[width=1.0\linewidth]{figs/fractions_of_types-cp.pdf}
+    \caption{Content providers}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+\centering
+    \includegraphics[width=1.0\linewidth]{figs/fractions_of_types-ec.pdf}
+    \caption{Enterprise customers}
+\end{subfigure}
+\end{figure*}
+
+Last, we look at the types of ASes that we are seeing between these paths, and
+whether or not our traffic would be, in general, flowing over a different part
+of the Internet.
 
 
 %******************************************************************************
