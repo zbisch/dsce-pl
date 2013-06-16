@@ -55,7 +55,6 @@ Angela H. Jiang\\
 \affaddr{angelajiang@u.northwestern.edu}
 \alignauthor
 Zachary S. Bischof\\
-\affaddr{Northwestern University}\\
 \affaddr{zbischof@eecs.northwestern.edu}
 }
 
@@ -64,15 +63,24 @@ Zachary S. Bischof\\
 %******************************************************************************
 \begin{abstract}
 
-PlanetLab has become a popular testbed for gathering Internet measurements. To
+In the past decade, PlanetLab has become a popular testbed for testing
+networked systems and evaluating their performance. However, due to differences
+in the architecure of PlanetLab and the general Internet, results on PlanetLab
+may not translate directly into performance on the general Internet.  To
 provide a more accurate platform for this purpose, researchers have attempted
-to improve PlanetLab's representativeness of the Internet. While we don't know
-what to model PlanetLab after, prior works have shown characteristics of these
-nodes to be generally homogenous. We therefore focus on adding heterogeneity to
-PlanetLab to increase its likeness to the Internet. We do this by exploiting
-the existing heterogeneity of university networks in the world. Our work
-attempts to discover how PlanetLab nodes are similar and university nodes with
-the most potential to provide diversity.
+to improve PlanetLab's representativeness of the Internet. While answering the
+question of, "What is representative of the general Internet?" is an on-going
+topic in research, prior works have shown characteristics of these nodes to be
+generally homogenous. 
+
+
+While we don't know what to model PlanetLab after, increasing the heterogeneity
+of PlanetLab interconnectivity would allow researchers to customize what type
+of Internet they want to represent.  We therefore focus on adding heterogeneity
+to PlanetLab to increase its ability to represent the Internet.  We do this by
+exploiting the existing heterogeneity of university networks in the world. Our
+work attempts to discover how PlanetLab nodes are similar and university nodes
+with the most potential to provide diversity.
 
 \end{abstract}
 
@@ -142,10 +150,49 @@ heterogeneity this project achieves.
 %******************************************************************************
 \section{Methodology}
 
+In this section we describe the set up of our experiment. We discuss the
+selection of potential new sites. 
+
 \subsection{Selection of remote hosts}
+
+First we had to create a list of potential PlanetLab sites. We considered any
+university or college that is not currently hosting a PlanetLab node to be a
+potential PlanetLab site. As such, we obtain a list of universities and
+colleges by crawling two websites,
+Wikipedia\footnote{\url{http://en.wikipedia.org/wiki/Lists_of_universities_and_colleges_by_country}}
+and Universities Worldwide\footnote{\url{http://univ.cc}}. For each school that
+we found on these sites, we attempted to scrape that school's homepage. Since
+many universities host their own website, we use this website as an estimate
+for where the PlanetLab node would be placed. All measurements to the potential
+PlanetLab site are made to the address of this website. From this list, we
+identified 7010 potential sites.
+
+Some schools may not be hosting their own page, but instead using a web hosting
+company. In these cases, we could still ask the hosting company to install a
+PlanetLab node if it were useful for researchers.
+
+\subsection{Experiment}
+
+After we had obtain a list of potential sites, we created a slice on PlanetLab
+for measurement. We added all the PlanetLab nodes that were up and running when
+we set up our experiment, resulting in 694 nodes being used for our slice. We
+then conducted traceroute measurements on each PlanetLab node at a rate of one
+per minute. Each node measured to all 7010 potential new sites and all 694
+existing PlanetLab nodes, resulting in 7704 total sites being measured at each
+node.
+
 
 %******************************************************************************
 \section{Results}
+
+
+\begin{enumerate}
+\item Number of hops
+\item Number of ASes
+\item Types of ASes
+\end{enumerate}
+
+\subsection{Number of hops}
 
 \begin{figure}
 \centering
@@ -154,6 +201,7 @@ heterogeneity this project achieves.
 and South American Sites}
 \end{figure}
 
+\subsection{Number of AS hops}
 
 \begin{figure}
 \centering
@@ -162,6 +210,7 @@ and South American Sites}
 and South American Sites}
 \end{figure}
 
+\subsection{Types of ASes}
 
 \begin{figure}
 \centering
@@ -184,14 +233,6 @@ and South American Sites}
 and South American Sites}
 \end{figure}
 
-Metrics used for comparison:
-
-\begin{enumerate}
-\item Latency
-\item Throughput
-\item Paths (AS paths?)
-\item Number of ASes
-\end{enumerate}
 
 %******************************************************************************
 \section{Future work}
