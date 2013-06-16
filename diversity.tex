@@ -282,42 +282,83 @@ traversed.
 \centering
     \includegraphics[width=1.0\linewidth]{figs/fractions_of_types-ltp.pdf}
     \caption{Large transit providers}
+\label{fig:as_ltp}
 \end{subfigure}
 \begin{subfigure}[b]{0.45\textwidth}
 \centering
     \includegraphics[width=1.0\linewidth]{figs/fractions_of_types-tier1.pdf}
     \caption{Tier 1 providers}
+\label{fig:as_tier1}
 \end{subfigure}
 
 \begin{subfigure}[b]{0.45\textwidth}
 \centering
     \includegraphics[width=1.0\linewidth]{figs/fractions_of_types-stp.pdf}
     \caption{Small transit providers}
+\label{fig:as_stp}
 \end{subfigure}
 \begin{subfigure}[b]{0.45\textwidth}
 \centering
     \includegraphics[width=1.0\linewidth]{figs/fractions_of_types-ahp.pdf}
     \caption{Hosting providers}
+\label{fig:as_ahp}
 \end{subfigure}
 
 \begin{subfigure}[b]{0.45\textwidth}
 \centering
     \includegraphics[width=1.0\linewidth]{figs/fractions_of_types-cp.pdf}
     \caption{Content providers}
+\label{fig:as_cp}
 \end{subfigure}
 \begin{subfigure}[b]{0.45\textwidth}
 \centering
     \includegraphics[width=1.0\linewidth]{figs/fractions_of_types-ec.pdf}
     \caption{Enterprise customers}
+\label{fig:as_ec}
 \end{subfigure}
 \caption{CDFs of the median and mean fraction of ASes of each type 
 for users in both sets}
-\label{}
+\label{fig:as_types}
 \end{figure*}
 
 Last, we look at the types of ASes that we are seeing between these paths, and
 whether or not our traffic would be, in general, flowing over a different part
-of the Internet. Figure~\ref
+of the Internet. Figure~\ref{fig:as_types} shows a CDF of the mean and median
+fraction for each type of AS studied. The categories include: large transit
+providers, tier 1 providers, small transit providers, hosting providers,
+content providers and enterprise customer netowrks.
+
+For some of the categories, such as hosting providers and enterprise customers,
+the distributions are very similar for the two datasets. Although the
+difference is small, we do note that in the paths between PlanetLab nodes and
+sites in Africa and South America, we do see a small number of cases where traffic 
+appears to be going through content provider-type networks. 
+
+However, the most interesting cases are those of large transit providers, tier
+1 providers, and small transit providers. Here we see that in paths between
+PlanetLab nodes and sites in Africa and South America, the number of paths that
+cross a large transit provider or a tier 1 provider are much higher than with
+traffic between existing PlanetLab nodes. Here we see that for appxoximately
+97\% of median paths in PlanetLab, traffic does not go over a tier 1 provider
+or large transit provider at all. In contrast, traffic to South America or
+Africa is much more likely to traverse a large transit provider. 
+
+On the other hand, traffic between PlanetLabs is more likely to be be composed
+of a higher fraction of small transit providers. At the 50th percentile, paths
+between PlanetLab nodes and sites in South America and Africa, the median path
+does not cross over any small transit providers. At all percentiles, traffic to
+these potential new sites is less likely to traverse a small transit provider.
+
+In this section we have shown that traffic within PlanetLab is more likely to
+be carried over small transit providers instead of large transit providers or
+tier 1 providers. Therefore, we note that traffic to these other destinations
+is more likely to be traversing not only different networks, but
+\emph{different kinds} of networks. This would be useful for researchers that
+wish to test their systems on networks that rae more likely to be traversing
+such providers. 
+
+
+transit providers and tier 1 providers, 
 
 
 %******************************************************************************
