@@ -91,7 +91,7 @@ node.
 PlanetLab is a testbed for researchers in computer networking and distributed
 systems. Although not part of its original purpose, many researchers have
 leveraged PlanetLab for conducting measurements of the Internet.  In general,
-most of its nodes are hosted in university networks.
+most of its nodes are hosted in university networks.\cite{banerjee:connectivity}
 
 However, due to the nature of its design, various network aspects of PlanetLab
 nodes are found to be generally homogeneous. Sites are mostly connected to high
@@ -112,11 +112,11 @@ to improve the flexibility it provides to network researchers.
 
 To function as a PlanetLab node, a site must meet certain resource and hardware
 standards. For example, the site must be a server class machine and publicly
-addressable by a static IP and hostname.  These requirements allow PlanetLab
-nodes to be easily managed by a remote system but is sually satisfied by
+addressable by a static IP and hostname. These requirements allow PlanetLab
+nodes to be easily managed by a remote system but is usually satisfied by
 machines in University networks.  Additionally, in order to use PlanetLab for
 experimentation, a researcher must purchase hardware and set up their own
-PlanetLab site. 
+PlanetLab site.\cite{dischinger:satellitelab}
 
 The combination of both these requirements as well as the system of incentives
 for creating a PlanetLab site, result in the majority of PlanetLab nodes being
@@ -139,25 +139,25 @@ impact on PlanetLab homogeneity.
 
 
 Previous works have attempted to measure various network qualities of PlanetLab
-nodes. Banerjee et all, found that 85\% of hosts are located within an
-interconnected network of high speed research networks, which they refer to as
-the GREN. They also found that 91\% of origin ASes are located in North America
-while 74\% are in North American research ASes. Traffic between PlanetLab nodes
+nodes. Banerjee et al.\cite{banerjee:connectivity} found that 85\% of hosts are
+located within an interconnected network of high speed research networks, which they 
+refer to as the GREN. They also found that 91\% of origin ASes are located in North 
+America while 74\% are in North American research ASes. Traffic between PlanetLab nodes
 traversed 80 ASes, only 8\% of the 1123 existing ASes at the time. We are therefore
 motivated to measure potential heterogeneity of other sites on the GREN.
 
-Other works have also attempted to quantify PlanetLab’s heterogeneity. Banerjee
-et all compared qualities of PlanetLab’s nodes on research and commercial
-networks. Dischinger et all, looked at how adding hosts on edge networks could
-affect PlanetLab. By increasing a subset of PlanetLab sites with 10\% worth of
-edge nodes, the number of AS links tripled. This motivates their project, which
-integrates edge nodes to PlanetLab’s infrastructure. Under
+Other works have also attempted to quantify PlanetLab’s heterogeneity. Banerjee et al.
+\cite{banerjee:connectivity} compared qualities of PlanetLab’s nodes on research and 
+commercial networks. Dischinger et al.\cite{dischinger:satellitelab}, looked 
+at how adding hosts on edge networks could affect PlanetLab. By increasing a subset of 
+PlanetLab sites with 10\% worth of edge nodes, the number of AS links tripled. This 
+motivates their project, which integrates edge nodes to PlanetLab’s infrastructure. Under
 SatelliteLab~\cite{dischinger:satellitelab}, the university connected network
 remains central to PlanetLab.  Our attempt to increase the diversity of
 university hosts would only add to the heterogeneity this project achieves.
 
 While measuring from well-connected hosts inside academic networks, Dischinger
-et al.~\cite{dischinger:residential} characterized residential broadband
+et al.\cite{dischinger:residential} characterized residential broadband
 connections by sending packet trains to end-hosts. They included measurements
 such as download and upload throughput, round-trip times and jitter, packet
 loss rates, queue lengths, and queue drop policies. 
